@@ -95,9 +95,17 @@
 			path = KeychainManager;
 			sourceTree = "<group>";
 		};
+		A8461DD72B38A8E800928F9D /* AppModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppModule;
+			sourceTree = "<group>";
+		};
 		A8D318822B37250000EF5B38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A8461DD72B38A8E800928F9D /* AppModule */,
 				A8D318832B37255000EF5B38 /* PasscodeModule */,
 			);
 			path = Module;
