@@ -52,7 +52,7 @@ class FavotiteView: UIViewController {
         title = "Избранное"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.barTintColor = .appMain
-        
+        navigationController?.navigationBar.isHidden = false
         
         navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor : UIColor.white
@@ -86,7 +86,12 @@ extension FavotiteView: UICollectionViewDataSource{
 }
 
 extension FavotiteView: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let item = presenter.post?[indexPath.item] else { return }
+        
+        let detailsView = Builder.createDetailsController(item: item)
+        navigationController?.pushViewController(detailsView, animated: true)
+    }
 }
 
 

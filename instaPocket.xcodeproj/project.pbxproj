@@ -13,6 +13,11 @@
 		A804561C2B37207F00290324 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A804561A2B37207F00290324 /* LaunchScreen.storyboard */; };
 		A80722472B4ECB7300A94D47 /* FavoriteViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80722462B4ECB7300A94D47 /* FavoriteViewPresenter.swift */; };
 		A80722492B4ED13900A94D47 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80722482B4ED13900A94D47 /* FavoriteCell.swift */; };
+		A832C2DF2B57F0E200742D9F /* DetailsPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832C2DE2B57F0E200742D9F /* DetailsPhotoCell.swift */; };
+		A832C2E12B57F2CE00742D9F /* DetailsDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832C2E02B57F2CE00742D9F /* DetailsDescriptionCell.swift */; };
+		A832C2E32B57F66100742D9F /* DetailsAddCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832C2E22B57F66100742D9F /* DetailsAddCommentCell.swift */; };
+		A832C2E52B57F70900742D9F /* UITextField.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832C2E42B57F70900742D9F /* UITextField.ext.swift */; };
+		A832C2E72B57F8D100742D9F /* DetailsMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832C2E62B57F8D100742D9F /* DetailsMapCell.swift */; };
 		A83591D72B3B072300041ADE /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83591D62B3B072300041ADE /* MainScreenView.swift */; };
 		A83591DB2B3B074200041ADE /* FavotiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83591DA2B3B074200041ADE /* FavotiteView.swift */; };
 		A83591DD2B3B074D00041ADE /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83591DC2B3B074D00041ADE /* CameraView.swift */; };
@@ -31,6 +36,9 @@
 		A8461DBE2B3739A000928F9D /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8461DBD2B3739A000928F9D /* KeychainManager.swift */; };
 		A8461DC12B3739D100928F9D /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = A8461DC02B3739D100928F9D /* KeychainAccess */; };
 		A8461DC32B373DB300928F9D /* StringProtocol.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8461DC22B373DB300928F9D /* StringProtocol.ext.swift */; };
+		A887BC602B56C0620009F5E9 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887BC5F2B56C0620009F5E9 /* DetailsView.swift */; };
+		A887BC622B56C06D0009F5E9 /* DetailsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887BC612B56C06D0009F5E9 /* DetailsViewPresenter.swift */; };
+		A887BC652B56C42B0009F5E9 /* NavigationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887BC642B56C42B0009F5E9 /* NavigationHeader.swift */; };
 		A8D318872B3725AB00EF5B38 /* PasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D318862B3725AB00EF5B38 /* PasscodeView.swift */; };
 		A8D3188B2B3725DA00EF5B38 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D3188A2B3725DA00EF5B38 /* Builder.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +52,11 @@
 		A804561D2B37207F00290324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A80722462B4ECB7300A94D47 /* FavoriteViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewPresenter.swift; sourceTree = "<group>"; };
 		A80722482B4ED13900A94D47 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		A832C2DE2B57F0E200742D9F /* DetailsPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPhotoCell.swift; sourceTree = "<group>"; };
+		A832C2E02B57F2CE00742D9F /* DetailsDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsDescriptionCell.swift; sourceTree = "<group>"; };
+		A832C2E22B57F66100742D9F /* DetailsAddCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAddCommentCell.swift; sourceTree = "<group>"; };
+		A832C2E42B57F70900742D9F /* UITextField.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.ext.swift; sourceTree = "<group>"; };
+		A832C2E62B57F8D100742D9F /* DetailsMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsMapCell.swift; sourceTree = "<group>"; };
 		A83591D62B3B072300041ADE /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		A83591DA2B3B074200041ADE /* FavotiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavotiteView.swift; sourceTree = "<group>"; };
 		A83591DC2B3B074D00041ADE /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -61,6 +74,9 @@
 		A8461DBA2B372BFA00928F9D /* UIView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.ext.swift; sourceTree = "<group>"; };
 		A8461DBD2B3739A000928F9D /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		A8461DC22B373DB300928F9D /* StringProtocol.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocol.ext.swift; sourceTree = "<group>"; };
+		A887BC5F2B56C0620009F5E9 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		A887BC612B56C06D0009F5E9 /* DetailsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewPresenter.swift; sourceTree = "<group>"; };
+		A887BC642B56C42B0009F5E9 /* NavigationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHeader.swift; sourceTree = "<group>"; };
 		A8D318862B3725AB00EF5B38 /* PasscodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeView.swift; sourceTree = "<group>"; };
 		A8D3188A2B3725DA00EF5B38 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +131,17 @@
 				A80722462B4ECB7300A94D47 /* FavoriteViewPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A832C2DC2B57F0B900742D9F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A832C2DE2B57F0E200742D9F /* DetailsPhotoCell.swift */,
+				A832C2E02B57F2CE00742D9F /* DetailsDescriptionCell.swift */,
+				A832C2E22B57F66100742D9F /* DetailsAddCommentCell.swift */,
+				A832C2E62B57F8D100742D9F /* DetailsMapCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		A83591CC2B3B067600041ADE /* TabBarModule */ = {
@@ -215,6 +242,7 @@
 		A83592722B406DDA00041ADE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A887BC632B56C4110009F5E9 /* NavigationHeader */,
 				A83592732B406DE200041ADE /* TagCollection */,
 			);
 			path = Helpers;
@@ -236,6 +264,7 @@
 				A8461DC22B373DB300928F9D /* StringProtocol.ext.swift */,
 				A83591EB2B3B195900041ADE /* Date.ext.swift */,
 				A83592702B40635100041ADE /* UIAplication.ext.swift */,
+				A832C2E42B57F70900742D9F /* UITextField.ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -248,9 +277,44 @@
 			path = KeychainManager;
 			sourceTree = "<group>";
 		};
+		A887BC5C2B56C02D0009F5E9 /* DetailsModule */ = {
+			isa = PBXGroup;
+			children = (
+				A887BC5E2B56C03A0009F5E9 /* Presenter */,
+				A887BC5D2B56C0370009F5E9 /* View */,
+			);
+			path = DetailsModule;
+			sourceTree = "<group>";
+		};
+		A887BC5D2B56C0370009F5E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A832C2DC2B57F0B900742D9F /* Cell */,
+				A887BC5F2B56C0620009F5E9 /* DetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A887BC5E2B56C03A0009F5E9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A887BC612B56C06D0009F5E9 /* DetailsViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A887BC632B56C4110009F5E9 /* NavigationHeader */ = {
+			isa = PBXGroup;
+			children = (
+				A887BC642B56C42B0009F5E9 /* NavigationHeader.swift */,
+			);
+			path = NavigationHeader;
+			sourceTree = "<group>";
+		};
 		A8D318822B37250000EF5B38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A887BC5C2B56C02D0009F5E9 /* DetailsModule */,
 				A83591D42B3B06FC00041ADE /* CameraModule */,
 				A83591D32B3B06EA00041ADE /* FavoriteModule */,
 				A83591CF2B3B069500041ADE /* MainScreenModule */,
@@ -387,16 +451,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				A83591E12B3B078000041ADE /* TabBarViewPresenter.swift in Sources */,
+				A832C2E72B57F8D100742D9F /* DetailsMapCell.swift in Sources */,
 				A80722472B4ECB7300A94D47 /* FavoriteViewPresenter.swift in Sources */,
+				A832C2DF2B57F0E200742D9F /* DetailsPhotoCell.swift in Sources */,
+				A832C2E32B57F66100742D9F /* DetailsAddCommentCell.swift in Sources */,
+				A832C2E52B57F70900742D9F /* UITextField.ext.swift in Sources */,
 				A83591DB2B3B074200041ADE /* FavotiteView.swift in Sources */,
 				A83591EA2B3B154100041ADE /* PostItem.swift in Sources */,
 				A8D318872B3725AB00EF5B38 /* PasscodeView.swift in Sources */,
+				A887BC602B56C0620009F5E9 /* DetailsView.swift in Sources */,
 				A83592712B40635100041ADE /* UIAplication.ext.swift in Sources */,
 				A83591E82B3B145100041ADE /* MainPostHeader.swift in Sources */,
 				A80456102B37207D00290324 /* AppDelegate.swift in Sources */,
 				A8461DBE2B3739A000928F9D /* KeychainManager.swift in Sources */,
 				A8461DC32B373DB300928F9D /* StringProtocol.ext.swift in Sources */,
 				A83591D72B3B072300041ADE /* MainScreenView.swift in Sources */,
+				A832C2E12B57F2CE00742D9F /* DetailsDescriptionCell.swift in Sources */,
 				A80456122B37207D00290324 /* SceneDelegate.swift in Sources */,
 				A83592772B406F5900041ADE /* TagCollectionCell.swift in Sources */,
 				A83591EC2B3B195900041ADE /* Date.ext.swift in Sources */,
@@ -405,7 +475,9 @@
 				A8D3188B2B3725DA00EF5B38 /* Builder.swift in Sources */,
 				A8461DB82B37275B00928F9D /* PasscodePresenter.swift in Sources */,
 				A83591DF2B3B077100041ADE /* TabBarView.swift in Sources */,
+				A887BC622B56C06D0009F5E9 /* DetailsViewPresenter.swift in Sources */,
 				A83592752B406DF000041ADE /* TagCollectionView.swift in Sources */,
+				A887BC652B56C42B0009F5E9 /* NavigationHeader.swift in Sources */,
 				A83591E62B3B142C00041ADE /* MainPostCell.swift in Sources */,
 				A80722492B4ED13900A94D47 /* FavoriteCell.swift in Sources */,
 				A8461DBB2B372BFA00928F9D /* UIView.ext.swift in Sources */,

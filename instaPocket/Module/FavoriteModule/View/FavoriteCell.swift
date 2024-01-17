@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoriteCell: UICollectionViewCell {
+class FavoriteCell: UICollectionViewCell, CollectionViewCellProtocol {
     static let reuseId = "FavoriteCell"
     
     lazy var postImage: UIImageView = {
@@ -43,7 +43,7 @@ class FavoriteCell: UICollectionViewCell {
         return $0
     }(UILabel())
     
-    override init(frame: CGRect) {
+    required override init(frame: CGRect) {
         super.init(frame: frame)
         
         [postImage, removeInFavoriteButton, dateView].forEach{
