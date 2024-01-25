@@ -46,6 +46,7 @@ class FavotiteView: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setupNavBar()
+        NotificationCenter.default.post(name: .hideTabBar, object: nil, userInfo: ["isHide": false])
     }
     
     private func setupNavBar(){
