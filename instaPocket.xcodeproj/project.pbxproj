@@ -39,6 +39,9 @@
 		A887BC602B56C0620009F5E9 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887BC5F2B56C0620009F5E9 /* DetailsView.swift */; };
 		A887BC622B56C06D0009F5E9 /* DetailsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887BC612B56C06D0009F5E9 /* DetailsViewPresenter.swift */; };
 		A887BC652B56C42B0009F5E9 /* NavigationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887BC642B56C42B0009F5E9 /* NavigationHeader.swift */; };
+		A88DBB752B62572000CB498A /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88DBB742B62572000CB498A /* PhotoView.swift */; };
+		A88DBB772B625B7000CB498A /* PhotoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88DBB762B625B7000CB498A /* PhotoViewPresenter.swift */; };
+		A88DBB792B62621800CB498A /* NSNotification.Name.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88DBB782B62621800CB498A /* NSNotification.Name.ext.swift */; };
 		A8D318872B3725AB00EF5B38 /* PasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D318862B3725AB00EF5B38 /* PasscodeView.swift */; };
 		A8D3188B2B3725DA00EF5B38 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D3188A2B3725DA00EF5B38 /* Builder.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +80,9 @@
 		A887BC5F2B56C0620009F5E9 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		A887BC612B56C06D0009F5E9 /* DetailsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewPresenter.swift; sourceTree = "<group>"; };
 		A887BC642B56C42B0009F5E9 /* NavigationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHeader.swift; sourceTree = "<group>"; };
+		A88DBB742B62572000CB498A /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		A88DBB762B625B7000CB498A /* PhotoViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewPresenter.swift; sourceTree = "<group>"; };
+		A88DBB782B62621800CB498A /* NSNotification.Name.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.ext.swift; sourceTree = "<group>"; };
 		A8D318862B3725AB00EF5B38 /* PasscodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeView.swift; sourceTree = "<group>"; };
 		A8D3188A2B3725DA00EF5B38 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -265,6 +271,7 @@
 				A83591EB2B3B195900041ADE /* Date.ext.swift */,
 				A83592702B40635100041ADE /* UIAplication.ext.swift */,
 				A832C2E42B57F70900742D9F /* UITextField.ext.swift */,
+				A88DBB782B62621800CB498A /* NSNotification.Name.ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -311,9 +318,35 @@
 			path = NavigationHeader;
 			sourceTree = "<group>";
 		};
+		A88DBB712B62569900CB498A /* PhotoViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				A88DBB732B6256D300CB498A /* Presenter */,
+				A88DBB722B6256CF00CB498A /* View */,
+			);
+			path = PhotoViewModule;
+			sourceTree = "<group>";
+		};
+		A88DBB722B6256CF00CB498A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A88DBB742B62572000CB498A /* PhotoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A88DBB732B6256D300CB498A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A88DBB762B625B7000CB498A /* PhotoViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		A8D318822B37250000EF5B38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A88DBB712B62569900CB498A /* PhotoViewModule */,
 				A887BC5C2B56C02D0009F5E9 /* DetailsModule */,
 				A83591D42B3B06FC00041ADE /* CameraModule */,
 				A83591D32B3B06EA00041ADE /* FavoriteModule */,
@@ -456,6 +489,7 @@
 				A832C2DF2B57F0E200742D9F /* DetailsPhotoCell.swift in Sources */,
 				A832C2E32B57F66100742D9F /* DetailsAddCommentCell.swift in Sources */,
 				A832C2E52B57F70900742D9F /* UITextField.ext.swift in Sources */,
+				A88DBB772B625B7000CB498A /* PhotoViewPresenter.swift in Sources */,
 				A83591DB2B3B074200041ADE /* FavotiteView.swift in Sources */,
 				A83591EA2B3B154100041ADE /* PostItem.swift in Sources */,
 				A8D318872B3725AB00EF5B38 /* PasscodeView.swift in Sources */,
@@ -463,8 +497,10 @@
 				A83592712B40635100041ADE /* UIAplication.ext.swift in Sources */,
 				A83591E82B3B145100041ADE /* MainPostHeader.swift in Sources */,
 				A80456102B37207D00290324 /* AppDelegate.swift in Sources */,
+				A88DBB792B62621800CB498A /* NSNotification.Name.ext.swift in Sources */,
 				A8461DBE2B3739A000928F9D /* KeychainManager.swift in Sources */,
 				A8461DC32B373DB300928F9D /* StringProtocol.ext.swift in Sources */,
+				A88DBB752B62572000CB498A /* PhotoView.swift in Sources */,
 				A83591D72B3B072300041ADE /* MainScreenView.swift in Sources */,
 				A832C2E12B57F2CE00742D9F /* DetailsDescriptionCell.swift in Sources */,
 				A80456122B37207D00290324 /* SceneDelegate.swift in Sources */,
