@@ -72,6 +72,9 @@ class MainScreenView: UIViewController {
         topInsets = collectionView.adjustedContentInset.top
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.post(name: .hideTabBar, object: nil, userInfo: ["isHide": false])
+    }
 
 }
 
