@@ -52,8 +52,10 @@ class Builder: BuilderProtocol{
     
     static func createCameraScreenController() -> UIViewController {
         let cameraView = CameraView()
+        let presenter = CameraViewPresenter(view: cameraView)
         
-        return cameraView
+        cameraView.presenter = presenter
+        return UIImagePickerController(rootViewController: cameraView)
     }
     
     

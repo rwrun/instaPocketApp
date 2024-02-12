@@ -44,6 +44,7 @@
 		A88DBB792B62621800CB498A /* NSNotification.Name.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88DBB782B62621800CB498A /* NSNotification.Name.ext.swift */; };
 		A8D318872B3725AB00EF5B38 /* PasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D318862B3725AB00EF5B38 /* PasscodeView.swift */; };
 		A8D3188B2B3725DA00EF5B38 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D3188A2B3725DA00EF5B38 /* Builder.swift */; };
+		A8D45D0B2B7A0689004B9B84 /* CameraViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D45D0A2B7A0689004B9B84 /* CameraViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		A88DBB782B62621800CB498A /* NSNotification.Name.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.ext.swift; sourceTree = "<group>"; };
 		A8D318862B3725AB00EF5B38 /* PasscodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeView.swift; sourceTree = "<group>"; };
 		A8D3188A2B3725DA00EF5B38 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		A8D45D0A2B7A0689004B9B84 /* CameraViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 		A83591D42B3B06FC00041ADE /* CameraModule */ = {
 			isa = PBXGroup;
 			children = (
+				A8D45D092B7A067B004B9B84 /* Presenter */,
 				A83591D92B3B072F00041ADE /* View */,
 			);
 			path = CameraModule;
@@ -407,6 +410,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		A8D45D092B7A067B004B9B84 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A8D45D0A2B7A0689004B9B84 /* CameraViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -517,6 +528,7 @@
 				A83591E62B3B142C00041ADE /* MainPostCell.swift in Sources */,
 				A80722492B4ED13900A94D47 /* FavoriteCell.swift in Sources */,
 				A8461DBB2B372BFA00928F9D /* UIView.ext.swift in Sources */,
+				A8D45D0B2B7A0689004B9B84 /* CameraViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
