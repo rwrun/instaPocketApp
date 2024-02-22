@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol CameraViewProtocol: AnyObject{
     
@@ -41,8 +42,11 @@ class CameraView: UIViewController, CameraViewProtocol {
     }(UIButton(frame: CGRect(x: view.center.x - 30, y: view.frame.height - 110, width: 60, height: 60), primaryAction: shotAction))
     
     
-    private lazy var shotAction = UIAction { _ in
-        print(#function)
+    private lazy var shotAction = UIAction { [weak self ] _ in
+        guard let self = self else { return }
+        let photoSettings = AVCapturePhotoSettings()
+        photoSettings.flashMode = .off
+        self.presenter.cameraService.output.capturePhoto(with: photoSettings, delegate: self)
     }
     
     private lazy var switchCamera: UIButton = {
@@ -62,13 +66,16 @@ class CameraView: UIViewController, CameraViewProtocol {
     }(UIButton())
     
     override func viewWillAppear(_ animated: Bool) {
+        presenter.cameraService.setupCaptureSession()
         navigationController?.navigationBar.isHidden = true
         NotificationCenter.default.post(name: .hideTabBar, object: nil, userInfo: ["isHide": true])
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .gray
+        checkPermisions()
+        setupPreviewLayer()
+        
         
         view.addSubview(shotsCollectionView)
         view.addSubview(closeBtn)
@@ -77,7 +84,66 @@ class CameraView: UIViewController, CameraViewProtocol {
         view.addSubview(nextBtn)
         
     }
+    
+    
+    private func checkPermisions(){
+        let cameraStatusAuth = AVCaptureDevice.authorizationStatus(for: .video)
+        
+        switch cameraStatusAuth {
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { auht in
+                if !auht {
+                    abort()
+                }
+            }
+        case .restricted, .denied:
+            abort()
+        case .authorized:
+            return
+        default:
+            fatalError()
+        }
+    }
+    
+    private func setupPreviewLayer(){
+        let previewLayer = AVCaptureVideoPreviewLayer(session: presenter.cameraService.captureSession)
+        
+        previewLayer.frame = view.bounds
+        previewLayer.videoGravity = .resizeAspectFill
+        view.layer.addSublayer(previewLayer)
+    }
 
+    
+    private func getImageView(image: UIImage) -> UIImageView{
+        let imageView = UIImageView()
+        imageView.frame.size = CGSize(width: 60, height: 60)
+        imageView.image = image
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 10
+        imageView.clipsToBounds = true
+        
+        return imageView
+    }
+}
+
+extension CameraView: AVCapturePhotoCaptureDelegate{
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        guard error == nil else {
+            print(error!.localizedDescription)
+            return
+        }
+        
+        guard let imageData = photo.fileDataRepresentation() else { return }
+        
+        if let image = UIImage(data: imageData) {
+            presenter.photos.append(image)
+            self.shotsCollectionView.reloadData()
+        }
+    }
+    
+    
+ 
 }
 
 extension CameraView: UICollectionViewDataSource{
@@ -88,7 +154,9 @@ extension CameraView: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "shotCell", for: indexPath)
         
-        cell.backgroundColor = .green
+        let photo = presenter.photos[indexPath.item]
+        let imageView = self.getImageView(image: photo)
+        cell.addSubview(imageView)
         return cell
     }
     

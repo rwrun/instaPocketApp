@@ -52,7 +52,9 @@ class Builder: BuilderProtocol{
     
     static func createCameraScreenController() -> UIViewController {
         let cameraView = CameraView()
-        let presenter = CameraViewPresenter(view: cameraView)
+        let cameraService = CameraService()
+        
+        let presenter = CameraViewPresenter(view: cameraView, cameraService: cameraService)
         
         cameraView.presenter = presenter
         return UIImagePickerController(rootViewController: cameraView)
@@ -83,5 +85,13 @@ class Builder: BuilderProtocol{
         
         photoView.presenter = presenter
         return photoView
+    }
+    
+    static func createAddPostViewController(photos: [UIImage]) -> UIViewController{
+        let addPostView = AddPostView()
+        let presenter = AddPostPresenter(view: addPostView, photos: photos)
+        
+        addPostView.presenter = presenter
+        return addPostView
     }
 }

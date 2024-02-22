@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A80237B72B7B7766004A4BEF /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80237B62B7B7766004A4BEF /* CameraService.swift */; };
+		A802382B2B87848A004A4BEF /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A802382A2B87848A004A4BEF /* AddPostView.swift */; };
+		A802382D2B8784B0004A4BEF /* AddPostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A802382C2B8784B0004A4BEF /* AddPostPresenter.swift */; };
+		A80238302B8789FC004A4BEF /* AddPostPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A802382F2B8789FC004A4BEF /* AddPostPhotoCell.swift */; };
+		A80238322B87905A004A4BEF /* AddPostTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80238312B87905A004A4BEF /* AddPostTagCell.swift */; };
+		A80238342B8794E6004A4BEF /* AddPostFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80238332B8794E6004A4BEF /* AddPostFieldCell.swift */; };
 		A80456102B37207D00290324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A804560F2B37207D00290324 /* AppDelegate.swift */; };
 		A80456122B37207D00290324 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80456112B37207D00290324 /* SceneDelegate.swift */; };
 		A80456192B37207F00290324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A80456182B37207F00290324 /* Assets.xcassets */; };
@@ -48,6 +54,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A80237B62B7B7766004A4BEF /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		A802382A2B87848A004A4BEF /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
+		A802382C2B8784B0004A4BEF /* AddPostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostPresenter.swift; sourceTree = "<group>"; };
+		A802382F2B8789FC004A4BEF /* AddPostPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostPhotoCell.swift; sourceTree = "<group>"; };
+		A80238312B87905A004A4BEF /* AddPostTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostTagCell.swift; sourceTree = "<group>"; };
+		A80238332B8794E6004A4BEF /* AddPostFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostFieldCell.swift; sourceTree = "<group>"; };
 		A804560C2B37207D00290324 /* instaPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instaPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A804560F2B37207D00290324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A80456112B37207D00290324 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +113,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A80237B52B7B775A004A4BEF /* CameraService */ = {
+			isa = PBXGroup;
+			children = (
+				A80237B62B7B7766004A4BEF /* CameraService.swift */,
+			);
+			path = CameraService;
+			sourceTree = "<group>";
+		};
+		A80238262B878454004A4BEF /* AddPost */ = {
+			isa = PBXGroup;
+			children = (
+				A80238292B878475004A4BEF /* Model */,
+				A80238282B878468004A4BEF /* Presenter */,
+				A80238272B878465004A4BEF /* View */,
+			);
+			path = AddPost;
+			sourceTree = "<group>";
+		};
+		A80238272B878465004A4BEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A802382E2B8789D4004A4BEF /* Cell */,
+				A802382A2B87848A004A4BEF /* AddPostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A80238282B878468004A4BEF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A802382C2B8784B0004A4BEF /* AddPostPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A80238292B878475004A4BEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A802382E2B8789D4004A4BEF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A802382F2B8789FC004A4BEF /* AddPostPhotoCell.swift */,
+				A80238312B87905A004A4BEF /* AddPostTagCell.swift */,
+				A80238332B8794E6004A4BEF /* AddPostFieldCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A80456032B37207D00290324 = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +289,7 @@
 		A83591D42B3B06FC00041ADE /* CameraModule */ = {
 			isa = PBXGroup;
 			children = (
+				A80237B52B7B775A004A4BEF /* CameraService */,
 				A8D45D092B7A067B004B9B84 /* Presenter */,
 				A83591D92B3B072F00041ADE /* View */,
 			);
@@ -349,6 +414,7 @@
 		A8D318822B37250000EF5B38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A80238262B878454004A4BEF /* AddPost */,
 				A88DBB712B62569900CB498A /* PhotoViewModule */,
 				A887BC5C2B56C02D0009F5E9 /* DetailsModule */,
 				A83591D42B3B06FC00041ADE /* CameraModule */,
@@ -502,10 +568,14 @@
 				A832C2E52B57F70900742D9F /* UITextField.ext.swift in Sources */,
 				A88DBB772B625B7000CB498A /* PhotoViewPresenter.swift in Sources */,
 				A83591DB2B3B074200041ADE /* FavotiteView.swift in Sources */,
+				A802382B2B87848A004A4BEF /* AddPostView.swift in Sources */,
+				A80237B72B7B7766004A4BEF /* CameraService.swift in Sources */,
+				A80238302B8789FC004A4BEF /* AddPostPhotoCell.swift in Sources */,
 				A83591EA2B3B154100041ADE /* PostItem.swift in Sources */,
 				A8D318872B3725AB00EF5B38 /* PasscodeView.swift in Sources */,
 				A887BC602B56C0620009F5E9 /* DetailsView.swift in Sources */,
 				A83592712B40635100041ADE /* UIAplication.ext.swift in Sources */,
+				A80238342B8794E6004A4BEF /* AddPostFieldCell.swift in Sources */,
 				A83591E82B3B145100041ADE /* MainPostHeader.swift in Sources */,
 				A80456102B37207D00290324 /* AppDelegate.swift in Sources */,
 				A88DBB792B62621800CB498A /* NSNotification.Name.ext.swift in Sources */,
@@ -517,9 +587,11 @@
 				A80456122B37207D00290324 /* SceneDelegate.swift in Sources */,
 				A83592772B406F5900041ADE /* TagCollectionCell.swift in Sources */,
 				A83591EC2B3B195900041ADE /* Date.ext.swift in Sources */,
+				A80238322B87905A004A4BEF /* AddPostTagCell.swift in Sources */,
 				A83591DD2B3B074D00041ADE /* CameraView.swift in Sources */,
 				A83591E42B3B0A1200041ADE /* MainScreenPresenter.swift in Sources */,
 				A8D3188B2B3725DA00EF5B38 /* Builder.swift in Sources */,
+				A802382D2B8784B0004A4BEF /* AddPostPresenter.swift in Sources */,
 				A8461DB82B37275B00928F9D /* PasscodePresenter.swift in Sources */,
 				A83591DF2B3B077100041ADE /* TabBarView.swift in Sources */,
 				A887BC622B56C06D0009F5E9 /* DetailsViewPresenter.swift in Sources */,
@@ -672,8 +744,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6H9J2DH62C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = instaPocket/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Приложение может использовать вашу камеру";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -698,8 +772,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6H9J2DH62C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = instaPocket/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Приложение может использовать вашу камеру";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
