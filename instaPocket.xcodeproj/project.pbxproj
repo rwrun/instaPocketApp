@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A80237B72B7B7766004A4BEF /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80237B62B7B7766004A4BEF /* CameraService.swift */; };
 		A80456102B37207D00290324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A804560F2B37207D00290324 /* AppDelegate.swift */; };
 		A80456122B37207D00290324 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80456112B37207D00290324 /* SceneDelegate.swift */; };
 		A80456192B37207F00290324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A80456182B37207F00290324 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A80237B62B7B7766004A4BEF /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		A804560C2B37207D00290324 /* instaPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instaPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A804560F2B37207D00290324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A80456112B37207D00290324 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A80237B52B7B775A004A4BEF /* CameraService */ = {
+			isa = PBXGroup;
+			children = (
+				A80237B62B7B7766004A4BEF /* CameraService.swift */,
+			);
+			path = CameraService;
+			sourceTree = "<group>";
+		};
 		A80456032B37207D00290324 = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +235,7 @@
 		A83591D42B3B06FC00041ADE /* CameraModule */ = {
 			isa = PBXGroup;
 			children = (
+				A80237B52B7B775A004A4BEF /* CameraService */,
 				A8D45D092B7A067B004B9B84 /* Presenter */,
 				A83591D92B3B072F00041ADE /* View */,
 			);
@@ -502,6 +513,7 @@
 				A832C2E52B57F70900742D9F /* UITextField.ext.swift in Sources */,
 				A88DBB772B625B7000CB498A /* PhotoViewPresenter.swift in Sources */,
 				A83591DB2B3B074200041ADE /* FavotiteView.swift in Sources */,
+				A80237B72B7B7766004A4BEF /* CameraService.swift in Sources */,
 				A83591EA2B3B154100041ADE /* PostItem.swift in Sources */,
 				A8D318872B3725AB00EF5B38 /* PasscodeView.swift in Sources */,
 				A887BC602B56C0620009F5E9 /* DetailsView.swift in Sources */,
@@ -672,8 +684,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6H9J2DH62C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = instaPocket/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Приложение может использовать вашу камеру";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -698,8 +712,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6H9J2DH62C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = instaPocket/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Приложение может использовать вашу камеру";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
