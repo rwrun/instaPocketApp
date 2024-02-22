@@ -86,4 +86,12 @@ class Builder: BuilderProtocol{
         photoView.presenter = presenter
         return photoView
     }
+    
+    static func createAddPostViewController(photos: [UIImage]) -> UIViewController{
+        let addPostView = AddPostView()
+        let presenter = AddPostPresenter(view: addPostView, photos: photos)
+        
+        addPostView.presenter = presenter
+        return addPostView
+    }
 }
