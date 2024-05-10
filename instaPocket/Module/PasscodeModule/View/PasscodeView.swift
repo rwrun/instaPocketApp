@@ -18,6 +18,7 @@ class PasscodeView: UIViewController {
 
     var passcodePresenter: PasscodePresenterProtocol!
     private let buttons: [ [Int] ] = [[1,2,3], [4,5,6], [7,8,9], [0]]
+    
     private lazy var passcodeTitle: UILabel = {
         .configure(view: $0) { label in
             label.textColor = .white
@@ -73,6 +74,8 @@ class PasscodeView: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .appMain
         
+        NotificationCenter.default.addObserver(self, selector: #selector(dismissPasscodeView), name: .dismissPascode, object: nil)
+        
         [keyboardStack, passcodeTitle, codeStack, deleteBtn].forEach{
             view.addSubview($0)
         }
@@ -106,6 +109,10 @@ class PasscodeView: UIViewController {
             deleteBtn.bottomAnchor.constraint(equalTo: keyboardStack.bottomAnchor, constant: -25),
             
         ])
+    }
+    
+    @objc func dismissPasscodeView(){
+        dismiss(animated: true)
     }
 
 }
@@ -168,3 +175,5 @@ extension PasscodeView: PasscodeViewProtocol{
     
     
 }
+
+

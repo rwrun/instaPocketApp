@@ -8,6 +8,11 @@
 import UIKit
 import AVFoundation
 
+
+protocol CameraViewDelegate{
+    func deletePhoto(index: Int)
+}
+
 protocol CameraViewProtocol: AnyObject{
     
 }
@@ -57,13 +62,25 @@ class CameraView: UIViewController, CameraViewProtocol {
     private lazy var nextBtn: UIButton = {
         $0.setTitle("Далее", for: .normal)
         $0.setTitleColor(.white, for: .normal)
+        $0.layer.opacity = 0.6
+        $0.isEnabled = false
         $0.backgroundColor = .black
         $0.layer.cornerRadius = 17.5
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         $0.frame.size = CGSize(width: 100, height: 35)
         $0.frame.origin = CGPoint(x: shotBtn.frame.origin.x + 90, y: shotBtn.frame.origin.y + 12.5)
         return $0
-    }(UIButton())
+    }(UIButton(primaryAction: nextBtnAction))
+    
+    lazy var nextBtnAction = UIAction { [weak self ] _ in
+        guard let self = self else { return }
+        if let addPostVC = Builder.createAddPostViewController(photos: self.presenter.photos) as? AddPostView{
+            addPostVC.delegate = self
+            navigationController?.pushViewController(addPostVC, animated: true)
+        }
+        
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         presenter.cameraService.setupCaptureSession()
@@ -138,6 +155,10 @@ extension CameraView: AVCapturePhotoCaptureDelegate{
         
         if let image = UIImage(data: imageData) {
             presenter.photos.append(image)
+            
+            nextBtn.layer.opacity = 1
+            nextBtn.isEnabled = true
+            
             self.shotsCollectionView.reloadData()
         }
     }
@@ -158,6 +179,22 @@ extension CameraView: UICollectionViewDataSource{
         let imageView = self.getImageView(image: photo)
         cell.addSubview(imageView)
         return cell
+    }
+    
+    
+}
+
+extension CameraView: CameraViewDelegate{
+    func deletePhoto(index: Int) {
+        presenter.deletePhoto(index: index)
+        
+        if presenter.photos.count == 0{
+            nextBtn.layer.opacity = 0.6
+            nextBtn.isEnabled = false
+        }
+        
+        shotsCollectionView.reloadData()
+        
     }
     
     

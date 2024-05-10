@@ -8,7 +8,7 @@
 import UIKit
 
 protocol BuilderProtocol{
-    static func getPasscodeController(passcodeState: PasscodeState, sceneDelegate: SceneDelegateProtocol) -> UIViewController
+    static func getPasscodeController(passcodeState: PasscodeState, sceneDelegate: SceneDelegateProtocol?, isSetting: Bool) -> UIViewController
     static func createTabBarController() -> UIViewController
     
     //vc
@@ -21,11 +21,11 @@ protocol BuilderProtocol{
 
 class Builder: BuilderProtocol{
     
-    static func getPasscodeController(passcodeState: PasscodeState, sceneDelegate: SceneDelegateProtocol) -> UIViewController{
+    static func getPasscodeController(passcodeState: PasscodeState, sceneDelegate: SceneDelegateProtocol?, isSetting: Bool) -> UIViewController{
         let passcodeView = PasscodeView()
         let keychainManager = KeychainManager()
         
-        let presenter = PasscodePresenter(view: passcodeView, passcodeState: passcodeState, keychainManager: keychainManager, sceneDelagate: sceneDelegate)
+        let presenter = PasscodePresenter(view: passcodeView, passcodeState: passcodeState, keychainManager: keychainManager, sceneDelagate: sceneDelegate, isSetting: isSetting)
         
         passcodeView.passcodePresenter = presenter
         return passcodeView
@@ -46,7 +46,7 @@ class Builder: BuilderProtocol{
         let presenter = MainScreenPresenter(view: mainView)
         mainView.presenter = presenter
         
-        return mainView
+        return  mainView
     }
     
     
@@ -57,7 +57,7 @@ class Builder: BuilderProtocol{
         let presenter = CameraViewPresenter(view: cameraView, cameraService: cameraService)
         
         cameraView.presenter = presenter
-        return UIImagePickerController(rootViewController: cameraView)
+        return UINavigationController(rootViewController: cameraView)
     }
     
     
@@ -93,5 +93,14 @@ class Builder: BuilderProtocol{
         
         addPostView.presenter = presenter
         return addPostView
+    }
+    
+    
+    static func createSettingsViewController() -> UIViewController{
+        let settingView = SettingsView()
+        let presenter = SettingsViewPresenter(view: settingView)
+        
+        settingView.presenter = presenter
+        return UINavigationController(rootViewController: settingView)
     }
 }
