@@ -13,11 +13,11 @@ protocol CameraViewPresenterProtocol: AnyObject {
     var cameraService: CameraServiceProtocol { get set }
     var closeViewAction: UIAction? { get set }
     var switchCamera: UIAction? { get set }
+    func deletePhoto(index: Int)
     
 }
 
 class CameraViewPresenter: CameraViewPresenterProtocol{
-
     
     var cameraService: CameraServiceProtocol
     private weak var view: CameraViewProtocol?
@@ -39,4 +39,7 @@ class CameraViewPresenter: CameraViewPresenterProtocol{
     }
     
     
+    func deletePhoto(index: Int) {
+        photos.remove(at: index)
+    }
 }

@@ -39,7 +39,12 @@ class MainScreenView: UIViewController {
         $0.setBackgroundImage(UIImage(systemName: "gearshape"), for: .normal)
         $0.tintColor = .white
         return $0
-    }(UIButton())
+    }(UIButton(primaryAction: settingButtonAction))
+    
+    lazy var settingButtonAction = UIAction { [weak self] _ in
+        let settingVC = Builder.createSettingsViewController()
+        self?.present(settingVC, animated: true)
+    }
     
     private lazy var collectionView: UICollectionView = {
         
@@ -62,6 +67,7 @@ class MainScreenView: UIViewController {
         
     }(UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout()))
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,8 +75,10 @@ class MainScreenView: UIViewController {
         view.addSubview(collectionView)
         view.addSubview(topMenuView)
         
+        
         topInsets = collectionView.adjustedContentInset.top
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.post(name: .hideTabBar, object: nil, userInfo: ["isHide": false])
@@ -124,6 +132,7 @@ extension MainScreenView: UICollectionViewDataSource, UICollectionViewDelegate, 
                                                       weight: .bold)
         }
     }
+    
     
 }
 

@@ -42,6 +42,10 @@
 		A8461DBE2B3739A000928F9D /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8461DBD2B3739A000928F9D /* KeychainManager.swift */; };
 		A8461DC12B3739D100928F9D /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = A8461DC02B3739D100928F9D /* KeychainAccess */; };
 		A8461DC32B373DB300928F9D /* StringProtocol.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8461DC22B373DB300928F9D /* StringProtocol.ext.swift */; };
+		A86FA9AC2B8F8D170042E00D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86FA9AB2B8F8D170042E00D /* SettingsView.swift */; };
+		A86FA9AF2B8F8D5C0042E00D /* SettingsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86FA9AE2B8F8D5C0042E00D /* SettingsViewPresenter.swift */; };
+		A86FA9B32B8F8FD20042E00D /* SettigItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86FA9B22B8F8FD20042E00D /* SettigItems.swift */; };
+		A86FA9B62B8F90B90042E00D /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86FA9B52B8F90B90042E00D /* SettingCell.swift */; };
 		A887BC602B56C0620009F5E9 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887BC5F2B56C0620009F5E9 /* DetailsView.swift */; };
 		A887BC622B56C06D0009F5E9 /* DetailsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887BC612B56C06D0009F5E9 /* DetailsViewPresenter.swift */; };
 		A887BC652B56C42B0009F5E9 /* NavigationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887BC642B56C42B0009F5E9 /* NavigationHeader.swift */; };
@@ -90,6 +94,10 @@
 		A8461DBA2B372BFA00928F9D /* UIView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.ext.swift; sourceTree = "<group>"; };
 		A8461DBD2B3739A000928F9D /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		A8461DC22B373DB300928F9D /* StringProtocol.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocol.ext.swift; sourceTree = "<group>"; };
+		A86FA9AB2B8F8D170042E00D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A86FA9AE2B8F8D5C0042E00D /* SettingsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewPresenter.swift; sourceTree = "<group>"; };
+		A86FA9B22B8F8FD20042E00D /* SettigItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettigItems.swift; sourceTree = "<group>"; };
+		A86FA9B52B8F90B90042E00D /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		A887BC5F2B56C0620009F5E9 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		A887BC612B56C06D0009F5E9 /* DetailsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewPresenter.swift; sourceTree = "<group>"; };
 		A887BC642B56C42B0009F5E9 /* NavigationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHeader.swift; sourceTree = "<group>"; };
@@ -352,6 +360,49 @@
 			path = KeychainManager;
 			sourceTree = "<group>";
 		};
+		A86FA9A82B8F8CE90042E00D /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				A86FA9B02B8F8FC30042E00D /* Model */,
+				A86FA9AA2B8F8CF70042E00D /* Presenter */,
+				A86FA9A92B8F8CF30042E00D /* View */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		A86FA9A92B8F8CF30042E00D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A86FA9B42B8F90A80042E00D /* Cell */,
+				A86FA9AB2B8F8D170042E00D /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A86FA9AA2B8F8CF70042E00D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A86FA9AE2B8F8D5C0042E00D /* SettingsViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A86FA9B02B8F8FC30042E00D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A86FA9B22B8F8FD20042E00D /* SettigItems.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A86FA9B42B8F90A80042E00D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A86FA9B52B8F90B90042E00D /* SettingCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A887BC5C2B56C02D0009F5E9 /* DetailsModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +465,7 @@
 		A8D318822B37250000EF5B38 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A86FA9A82B8F8CE90042E00D /* SettingsView */,
 				A80238262B878454004A4BEF /* AddPost */,
 				A88DBB712B62569900CB498A /* PhotoViewModule */,
 				A887BC5C2B56C02D0009F5E9 /* DetailsModule */,
@@ -568,6 +620,7 @@
 				A832C2E52B57F70900742D9F /* UITextField.ext.swift in Sources */,
 				A88DBB772B625B7000CB498A /* PhotoViewPresenter.swift in Sources */,
 				A83591DB2B3B074200041ADE /* FavotiteView.swift in Sources */,
+				A86FA9B62B8F90B90042E00D /* SettingCell.swift in Sources */,
 				A802382B2B87848A004A4BEF /* AddPostView.swift in Sources */,
 				A80237B72B7B7766004A4BEF /* CameraService.swift in Sources */,
 				A80238302B8789FC004A4BEF /* AddPostPhotoCell.swift in Sources */,
@@ -581,12 +634,15 @@
 				A88DBB792B62621800CB498A /* NSNotification.Name.ext.swift in Sources */,
 				A8461DBE2B3739A000928F9D /* KeychainManager.swift in Sources */,
 				A8461DC32B373DB300928F9D /* StringProtocol.ext.swift in Sources */,
+				A86FA9AC2B8F8D170042E00D /* SettingsView.swift in Sources */,
 				A88DBB752B62572000CB498A /* PhotoView.swift in Sources */,
 				A83591D72B3B072300041ADE /* MainScreenView.swift in Sources */,
 				A832C2E12B57F2CE00742D9F /* DetailsDescriptionCell.swift in Sources */,
 				A80456122B37207D00290324 /* SceneDelegate.swift in Sources */,
+				A86FA9B32B8F8FD20042E00D /* SettigItems.swift in Sources */,
 				A83592772B406F5900041ADE /* TagCollectionCell.swift in Sources */,
 				A83591EC2B3B195900041ADE /* Date.ext.swift in Sources */,
+				A86FA9AF2B8F8D5C0042E00D /* SettingsViewPresenter.swift in Sources */,
 				A80238322B87905A004A4BEF /* AddPostTagCell.swift in Sources */,
 				A83591DD2B3B074D00041ADE /* CameraView.swift in Sources */,
 				A83591E42B3B0A1200041ADE /* MainScreenPresenter.swift in Sources */,
